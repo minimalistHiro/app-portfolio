@@ -3,9 +3,9 @@ import styles from "./page.module.css";
 
 const appProjects = [
   {
-    name: "Minimal Notes",
-    iconLabel: "MN",
-    appStoreLink: "#", // Replace with actual App Store URL
+    name: "YamaGo",
+    iconLabel: "YG",
+    appStoreLink: "https://apps.apple.com/jp/app/yamago-%E5%B1%B1%E6%89%8B%E7%B7%9A%E5%86%85%E9%AC%BC%E3%81%94%E3%81%A3%E3%81%93/id6754624431",
     playStoreLink: "#", // Replace with actual Google Play URL
   },
   {
@@ -25,7 +25,7 @@ const appProjects = [
 const socialLinks = [
   {
     label: "Antenna Books & Cafe ココシバ Official Site",
-    url: "#", // Replace with Antenna Books & Cafe ココシバ website URL
+    url: "https://cocoshiba.com",
     icon: "site",
   },
   {
