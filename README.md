@@ -1,4 +1,4 @@
-# Minimalist Hiro App
+# 金子広樹プロフィール
 
 Next.js + TypeScript をベースにした1ページ構成のランディングサイトです。Tailwind などの外部 UI フレームワークを使わず、CSS Modules でモバイルファーストのレイアウトを構築しています。
 
@@ -6,7 +6,7 @@ Next.js + TypeScript をベースにした1ページ構成のランディング�
 
 - `app/layout.tsx`：Geistフォントとメタデータを定義しつつ、`<body>`の基本スタイルを引き継ぎます。
 - `app/globals.css`：グローバルな色やタイポグラフィの変数、`body`の基本設定を記述。
-- `app/page.tsx` & `app/page.module.css`：ページ本体、各セクション（ヘッダー、プロフィール、アプリ一覧、ココシバ紹介、SNSリンク、フッター）とそれぞれのスタイル。アプリ情報・SNSリンク・紹介文などは配列で定義されており、後から差し替え可能です。
+- `app/page.tsx` & `app/page.module.css`：ページ本体、各セクション（ヘッダー、プロフィール、アプリ一覧、Antenna Books & Cafe ココシバ紹介、SNSリンク、フッター）とそれぞれのスタイル。アプリ情報・SNSリンク・紹介文などは配列で定義されており、後から差し替え可能です。
 - `public/images`：`/images/profile.jpg` と `/images/cocoshiba.jpg` のパスを仮置きしています。実際の画像に差し替えてください。
 
 ## Getting Started

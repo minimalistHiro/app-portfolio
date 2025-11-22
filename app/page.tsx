@@ -24,22 +24,22 @@ const appProjects = [
 
 const socialLinks = [
   {
-    label: "CocoShiba Official Site",
-    url: "#", // Replace with CocoShiba website URL
+    label: "Antenna Books & Cafe ココシバ Official Site",
+    url: "#", // Replace with Antenna Books & Cafe ココシバ website URL
     icon: "site",
   },
   {
-    label: "X (Twitter) – CocoShiba",
+    label: "X (Twitter) – Antenna Books & Cafe ココシバ",
     url: "#",
     icon: "x",
   },
   {
-    label: "Facebook – CocoShiba",
+    label: "Facebook – Antenna Books & Cafe ココシバ",
     url: "#",
     icon: "facebook",
   },
   {
-    label: "Instagram – CocoShiba",
+    label: "Instagram – Antenna Books & Cafe ココシバ",
     url: "#",
     icon: "instagram",
   },
@@ -47,7 +47,7 @@ const socialLinks = [
 
 const introParagraphs = [
   "App Developer at heart, running a community café and building simple digital products for mindful living.",
-  "I craft iOS/Android utilities with clean UX, then pair them with in-person moments at CocoShiba—a café that hosts workshops, music, and art.",
+  "I craft iOS/Android utilities with clean UX, then pair them with in-person moments at Antenna Books & Cafe ココシバ—a café that hosts workshops, music, and art.",
   "Minimalist visuals, generous whitespace, and thoughtful typography are the baseline for every release.",
 ];
 
@@ -95,7 +95,7 @@ export default function Home() {
     <div className={styles.page}>
       <div className={styles.container}>
         <header className={`${styles.section} ${styles.header}`}>
-          <p className={styles.siteTitle}>Hiro Kaneko – App Developer</p>
+          <p className={styles.siteTitle}>金子広樹プロフィール</p>
           <p className={styles.subtitle}>Minimalist apps & community-driven products</p>
         </header>
 
@@ -103,14 +103,14 @@ export default function Home() {
           <div className={styles.profileImageWrapper}>
             <Image
               src="/images/profile.jpg"
-              alt="金子 〇〇"
+              alt="金子広樹"
               width={200}
               height={200}
               className={styles.profileImage}
             />
           </div>
-          <p className={styles.profileName}>金子 〇〇</p>
-          <p className={styles.profileRole}>カフェ経営 × アプリ開発エンジニア</p>
+          <p className={styles.profileName}>金子広樹</p>
+          <p className={styles.profileRole}>Antenna Books & Cafe ココシバ 店主 × アプリ開発エンジニア</p>
         </section>
 
         <section className={`${styles.section} ${styles.introSection}`}>
@@ -155,7 +155,7 @@ export default function Home() {
           <div className={styles.coffeeImageWrapper}>
             <Image
               src="/images/cocoshiba.jpg"
-              alt="CocoShiba café space"
+              alt="Antenna Books & Cafe ココシバ 店舗"
               width={1200}
               height={900}
               className={styles.coffeeImage}
@@ -164,10 +164,10 @@ export default function Home() {
         </section>
 
         <section className={`${styles.section} ${styles.coffeeSection}`}>
-          <p className={styles.coffeeHeader}>CocoShiba – Community Café</p>
+          <p className={styles.coffeeHeader}>Antenna Books & Cafe ココシバ – Community Café</p>
           <p className={styles.coffeeText}>
-            こだわりのトルティーヤクレープとコーヒーで、ゆるやかなつながりを育む場。
-            店内ではアプリ開発者のコミュニティイベントも定期開催し、デジタルとリアルの融合を意識しています。
+            人と人をつなげる町のブックカフェ。厳選したトランスビュー扱いの本を取り揃えています。
+            ボードゲーム会、クッキング&パーティ、ハンドメイド・スローマーケット、ガレージセールなどイベントを複数開催しております。
           </p>
           <p className={styles.coffeeText}>
             モバイルファーストの思考を持ちながら、土台となるカフェの空間づくりも大切にしています。メニューやイベント情報はすべて自前のアプリで更新・通知し、開発者とお客様が一緒に成長するサイクルを描いています。
@@ -175,7 +175,7 @@ export default function Home() {
         </section>
 
         <section className={`${styles.section} ${styles.socialSection}`}>
-          <p className={styles.appsHeading}>Follow CocoShiba</p>
+          <p className={styles.appsHeading}>Follow Antenna Books & Cafe ココシバ</p>
           <div className={styles.socialList}>
             {socialLinks.map((link) => (
               <a
@@ -193,7 +193,7 @@ export default function Home() {
         </section>
 
         <footer className={styles.footer}>
-          © 2025 Hiro Kaneko ・ <a href="mailto:hiro@example.com">hiro@example.com</a>
+          © 2025 金子広樹 ・ <a href="mailto:hiro.kaneko@example.com">hiro.kaneko@example.com</a>
         </footer>
       </div>
     </div>

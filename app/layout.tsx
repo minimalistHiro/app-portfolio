@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Minimalist Hiro App",
+  title: "金子広樹プロフィール",
   description:
-    "Hiro Kaneko’s minimalist landing page for apps and the CocoShiba community café.",
+    "金子広樹が運営するAntenna Books & Cafe ココシバとアプリ開発の紹介ページ。",
 };
 
 export default function RootLayout({
