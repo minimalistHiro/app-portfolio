@@ -46,9 +46,10 @@ const socialLinks = [
 ];
 
 const introParagraphs = [
-  "App Developer at heart, running a community café and building simple digital products for mindful living.",
-  "I craft iOS/Android utilities with clean UX, then pair them with in-person moments at Antenna Books & Cafe ココシバ—a café that hosts workshops, music, and art.",
-  "Minimalist visuals, generous whitespace, and thoughtful typography are the baseline for every release.",
+  "ミニマリスト志向のアプリ開発者兼コミュニティカフェ「ココシバ」運営。",
+  "川口市芝銀座通り商店街公式ポイントアプリ SheeBa や、山手線リアル鬼ごっこゲーム YamaGo を開発し、シンプルで使いやすいプロダクト設計を重視しています。",
+  "カフェ運営では、食品ロスゼロのメニューと地域コミュニティづくりに注力。",
+  "「常識を超える仕組みをつくる」をテーマに、テクノロジーと場づくりを融合した活動を行っています。",
 ];
 
 type SocialIconProps = {
@@ -164,7 +165,7 @@ export default function Home() {
         </section>
 
         <section className={`${styles.section} ${styles.coffeeSection}`}>
-          <p className={styles.coffeeHeader}>Antenna Books & Cafe ココシバ – Community Café</p>
+          <p className={styles.coffeeHeader}>Antenna Books & Cafe ココシバ</p>
           <p className={styles.coffeeText}>
             人と人をつなげる町のブックカフェ。厳選したトランスビュー扱いの本を取り揃えています。
             ボードゲーム会、クッキング&パーティ、ハンドメイド・スローマーケット、ガレージセールなどイベントを複数開催しております。
@@ -172,6 +173,58 @@ export default function Home() {
           <p className={styles.coffeeText}>
             モバイルファーストの思考を持ちながら、土台となるカフェの空間づくりも大切にしています。メニューやイベント情報はすべて自前のアプリで更新・通知し、開発者とお客様が一緒に成長するサイクルを描いています。
           </p>
+        </section>
+
+        <section className={`${styles.section} ${styles.contactSection}`}>
+          <p className={styles.appsHeading}>Contact & Access</p>
+          <div className={styles.contactContent}>
+            <dl className={styles.contactList}>
+              <div className={styles.contactItem}>
+                <dt>メール</dt>
+                <dd>
+                  <a className={styles.contactLink} href="mailto:h.kaneko.baseball@icloud.com">
+                    h.kaneko.baseball@icloud.com
+                  </a>
+                </dd>
+              </div>
+              <div className={styles.contactItem}>
+                <dt>電話</dt>
+                <dd>
+                  <a className={styles.contactLink} href="tel:08060507194">
+                    080-6050-7194
+                  </a>
+                </dd>
+              </div>
+              <div className={styles.contactItem}>
+                <dt>住所</dt>
+                <dd>
+                  埼玉県川口市芝5-5-13{" "}
+                  <a
+                    className={styles.contactLink}
+                    href="https://www.google.com/maps?q=埼玉県川口市芝5-5-13"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    （Googleマップ）
+                  </a>
+                </dd>
+              </div>
+              <div className={styles.contactItem}>
+                <dt>営業時間</dt>
+                <dd>11:00〜18:00（月・火定休）</dd>
+              </div>
+            </dl>
+            <div className={styles.mapWrapper}>
+              <iframe
+                title="Antenna Books & Cafe ココシバ Google Map"
+                src="https://www.google.com/maps?q=埼玉県川口市芝5-5-13&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+                className={styles.mapFrame}
+              />
+            </div>
+          </div>
         </section>
 
         <section className={`${styles.section} ${styles.socialSection}`}>
@@ -193,7 +246,7 @@ export default function Home() {
         </section>
 
         <footer className={styles.footer}>
-          © 2025 金子広樹 ・ <a href="mailto:hiro.kaneko@example.com">hiro.kaneko@example.com</a>
+          © 2025 金子広樹 ・ <a href="mailto:h.kaneko.baseball@icloud.com">h.kaneko.baseball@icloud.com</a>
         </footer>
       </div>
     </div>

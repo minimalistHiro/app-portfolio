@@ -178,6 +178,65 @@
   margin: 0;
 }
 
+.contactSection {
+  gap: 1.25rem;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contactList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactItem dt {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.contactItem dd {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contactLink {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+.mapWrapper {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.mapFrame {
+  width: 100%;
+  min-height: 240px;
+  border: 0;
+  display: block;
+}
+
 .socialSection {
   gap: 0.5rem;
 }
@@ -234,5 +293,19 @@
   .storeLink {
     border: none;
     padding-bottom: 0;
+  }
+
+  .contactContent {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .contactList,
+  .mapWrapper {
+    flex: 1;
+  }
+
+  .mapFrame {
+    min-height: 320px;
   }
 }
