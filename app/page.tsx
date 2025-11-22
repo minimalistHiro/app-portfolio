@@ -30,17 +30,17 @@ const socialLinks = [
   },
   {
     label: "X (Twitter) – Antenna Books & Cafe ココシバ",
-    url: "#",
+    url: "https://x.com/cocoshiba5513",
     icon: "x",
   },
   {
     label: "Facebook – Antenna Books & Cafe ココシバ",
-    url: "#",
+    url: "https://www.facebook.com/cocoshiba5513",
     icon: "facebook",
   },
   {
     label: "Instagram – Antenna Books & Cafe ココシバ",
-    url: "#",
+    url: "https://www.instagram.com/cocoshiba5513",
     icon: "instagram",
   },
 ];
