@@ -1,65 +1,201 @@
 import Image from "next/image";
+import styles from "./page.module.css";
+
+const appProjects = [
+  {
+    name: "Minimal Notes",
+    iconLabel: "MN",
+    appStoreLink: "#", // Replace with actual App Store URL
+    playStoreLink: "#", // Replace with actual Google Play URL
+  },
+  {
+    name: "Cafe Compass",
+    iconLabel: "CC",
+    appStoreLink: "#",
+    playStoreLink: "#",
+  },
+  {
+    name: "Community Pulse",
+    iconLabel: "CP",
+    appStoreLink: "#",
+    playStoreLink: "#",
+  },
+];
+
+const socialLinks = [
+  {
+    label: "CocoShiba Official Site",
+    url: "#", // Replace with CocoShiba website URL
+    icon: "site",
+  },
+  {
+    label: "X (Twitter) – CocoShiba",
+    url: "#",
+    icon: "x",
+  },
+  {
+    label: "Facebook – CocoShiba",
+    url: "#",
+    icon: "facebook",
+  },
+  {
+    label: "Instagram – CocoShiba",
+    url: "#",
+    icon: "instagram",
+  },
+];
+
+const introParagraphs = [
+  "App Developer at heart, running a community café and building simple digital products for mindful living.",
+  "I craft iOS/Android utilities with clean UX, then pair them with in-person moments at CocoShiba—a café that hosts workshops, music, and art.",
+  "Minimalist visuals, generous whitespace, and thoughtful typography are the baseline for every release.",
+];
+
+type SocialIconProps = {
+  type: "site" | "x" | "facebook" | "instagram";
+};
+
+function SocialIcon({ type }: SocialIconProps) {
+  if (type === "x") {
+    return (
+      <svg viewBox="0 0 24 24" className={styles.socialIcon} aria-hidden="true">
+        <path d="M6 4l6.9 6.1L18 4m0 16l-6.9-6.1L6 20" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (type === "facebook") {
+    return (
+      <svg viewBox="0 0 24 24" className={styles.socialIcon} aria-hidden="true">
+        <path d="M14.5 3h2.4v3.8h-2.4a1.6 1.6 0 0 0-1.6 1.6v1.8h4.2L17 15h-3.1v6h-3.6v-6H7V9.2h3.4V5.6C10.4 2.4 11.9 1 15.8 1H14.5z" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (type === "instagram") {
+    return (
+      <svg viewBox="0 0 24 24" className={styles.socialIcon} aria-hidden="true">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="4" ry="4" stroke="currentColor" strokeWidth="1.8" fill="none" />
+        <circle cx="12" cy="12" r="3.5" stroke="currentColor" strokeWidth="1.8" fill="none" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" className={styles.socialIcon} aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" fill="none" />
+      <polyline points="8 12 11 15 16 9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className={styles.page}>
+      <div className={styles.container}>
+        <header className={`${styles.section} ${styles.header}`}>
+          <p className={styles.siteTitle}>Hiro Kaneko – App Developer</p>
+          <p className={styles.subtitle}>Minimalist apps & community-driven products</p>
+        </header>
+
+        <section className={`${styles.section} ${styles.profileSection}`}>
+          <div className={styles.profileImageWrapper}>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/profile.jpg"
+              alt="金子 〇〇"
+              width={200}
+              height={200}
+              className={styles.profileImage}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+          </div>
+          <p className={styles.profileName}>金子 〇〇</p>
+          <p className={styles.profileRole}>カフェ経営 × アプリ開発エンジニア</p>
+        </section>
+
+        <section className={`${styles.section} ${styles.introSection}`}>
+          {introParagraphs.map((text) => (
+            <p key={text} className={styles.introText}>
+              {text}
+            </p>
+          ))}
+        </section>
+
+        <section className={`${styles.section} ${styles.appsSection}`}>
+          <p className={styles.appsHeading}>Developed Apps</p>
+          <div className={styles.appCards}>
+            {appProjects.map((project) => (
+              <article key={project.name} className={styles.appCard}>
+                <div className={styles.appIcon}>{project.iconLabel}</div>
+                <h3 className={styles.appName}>{project.name}</h3>
+                <div className={styles.storeLinks}>
+                  <a
+                    className={styles.storeLink}
+                    href={project.appStoreLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    App Store
+                  </a>
+                  <a
+                    className={styles.storeLink}
+                    href={project.playStoreLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Google Play
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.coffeeSection}`}>
+          <div className={styles.coffeeImageWrapper}>
+            <Image
+              src="/images/cocoshiba.jpg"
+              alt="CocoShiba café space"
+              width={1200}
+              height={900}
+              className={styles.coffeeImage}
+            />
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.coffeeSection}`}>
+          <p className={styles.coffeeHeader}>CocoShiba – Community Café</p>
+          <p className={styles.coffeeText}>
+            こだわりのトルティーヤクレープとコーヒーで、ゆるやかなつながりを育む場。
+            店内ではアプリ開発者のコミュニティイベントも定期開催し、デジタルとリアルの融合を意識しています。
+          </p>
+          <p className={styles.coffeeText}>
+            モバイルファーストの思考を持ちながら、土台となるカフェの空間づくりも大切にしています。メニューやイベント情報はすべて自前のアプリで更新・通知し、開発者とお客様が一緒に成長するサイクルを描いています。
+          </p>
+        </section>
+
+        <section className={`${styles.section} ${styles.socialSection}`}>
+          <p className={styles.appsHeading}>Follow CocoShiba</p>
+          <div className={styles.socialList}>
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.url}
+                className={styles.socialItem}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={link.label}
+              >
+                <SocialIcon type={link.icon as SocialIconProps["type"]} />
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <footer className={styles.footer}>
+          © 2025 Hiro Kaneko ・ <a href="mailto:hiro@example.com">hiro@example.com</a>
+        </footer>
+      </div>
     </div>
   );
 }

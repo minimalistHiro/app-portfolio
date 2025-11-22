@@ -1,0 +1,238 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.siteTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin: 0.25rem 0 0;
+}
+
+.profileSection {
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.profileImageWrapper {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f5f5f5;
+  border: 1px solid var(--color-border);
+  margin: 0 auto;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profileName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profileRole {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.introSection {
+  align-items: center;
+}
+
+.introText {
+  max-width: 680px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--color-muted);
+}
+
+.appsSection {
+  gap: 1.25rem;
+}
+
+.appsHeading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.appCards {
+  display: grid;
+  gap: 1rem;
+}
+
+.coffeeSection {
+  gap: 1rem;
+}
+
+.appCard {
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #ffffff;
+}
+
+.appIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.appName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.storeLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.storeLink {
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+
+.storeLink:hover {
+  border-color: var(--color-accent);
+}
+
+.coffeeImageWrapper {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.coffeeImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.coffeeHeader {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.coffeeText {
+  line-height: 1.7;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.socialSection {
+  gap: 0.5rem;
+}
+
+.socialList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.socialItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background: #ffffff;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.socialItem:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.socialIcon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .appCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .storeLinks {
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .storeLink {
+    border: none;
+    padding-bottom: 0;
+  }
+}
