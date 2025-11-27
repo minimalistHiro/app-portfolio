@@ -1,10 +1,20 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-const appProjects = [
+type AppProject = {
+  name: string;
+  subtitle?: string;
+  iconLabel?: string;
+  iconImage?: string;
+  appStoreLink: string;
+  playStoreLink: string;
+};
+
+const appProjects: AppProject[] = [
   {
-    name: "YamaGo",
-    iconLabel: "YG",
+    name: "YamaGo〜山手線内鬼ごっこ〜",
+    subtitle: "新感覚！山手線内リアル鬼ごっこ",
+    iconImage: "/images/yamago-icon.png",
     appStoreLink: "https://apps.apple.com/jp/app/yamago-%E5%B1%B1%E6%89%8B%E7%B7%9A%E5%86%85%E9%AC%BC%E3%81%94%E3%81%A3%E3%81%93/id6754624431",
     playStoreLink: "#", // Replace with actual Google Play URL
   },
@@ -147,8 +157,23 @@ export default function Home() {
           <div className={styles.appCards}>
             {appProjects.map((project) => (
               <article key={project.name} className={styles.appCard}>
-                <div className={styles.appIcon}>{project.iconLabel}</div>
+                <div className={styles.appIcon}>
+                  {project.iconImage ? (
+                    <Image
+                      src={project.iconImage}
+                      alt={`${project.name} アイコン`}
+                      width={48}
+                      height={48}
+                      className={styles.appIconImage}
+                    />
+                  ) : (
+                    project.iconLabel
+                  )}
+                </div>
                 <h3 className={styles.appName}>{project.name}</h3>
+                {project.subtitle && (
+                  <p className={styles.appSubtitle}>{project.subtitle}</p>
+                )}
                 <div className={styles.storeLinks}>
                   <a
                     className={styles.storeLink}
