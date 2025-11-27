@@ -59,15 +59,13 @@ type SocialIconProps = {
 function SocialIcon({ type }: SocialIconProps) {
   if (type === "site") {
     return (
-      <svg viewBox="0 0 24 24" className={styles.socialIcon} aria-hidden="true">
-        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" fill="none" />
-        <path d="M12 3v18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M6.5 4c2.5 3 3.5 5.7 3.5 8s-1 5-3.5 8" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" />
-        <path d="M17.5 4c-2.5 3-3.5 5.7-3.5 8s1 5 3.5 8" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" />
-        <path d="M3.5 8h17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M3.5 16h17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M4.5 12h15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
+      <Image
+        src="/images/web.png"
+        alt="公式サイト"
+        width={22}
+        height={22}
+        className={styles.socialIconImage}
+      />
     );
   }
 
