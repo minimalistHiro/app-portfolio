@@ -62,8 +62,8 @@ function SocialIcon({ type }: SocialIconProps) {
       <Image
         src="/images/web.png"
         alt="公式サイト"
-        width={28}
-        height={28}
+        width={32}
+        height={32}
         className={styles.socialIconImage}
       />
     );
@@ -71,17 +71,25 @@ function SocialIcon({ type }: SocialIconProps) {
 
   if (type === "x") {
     return (
-      <svg viewBox="0 0 24 24" className={styles.socialIcon} aria-hidden="true">
-        <path d="M6 4l6.9 6.1L18 4m0 16l-6.9-6.1L6 20" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+      <Image
+        src="/images/X.png"
+        alt="X"
+        width={32}
+        height={32}
+        className={styles.socialIconImage}
+      />
     );
   }
 
   if (type === "facebook") {
     return (
-      <svg viewBox="0 0 24 24" className={styles.socialIcon} aria-hidden="true">
-        <path d="M14.5 3h2.4v3.8h-2.4a1.6 1.6 0 0 0-1.6 1.6v1.8h4.2L17 15h-3.1v6h-3.6v-6H7V9.2h3.4V5.6C10.4 2.4 11.9 1 15.8 1H14.5z" fill="currentColor" />
-      </svg>
+      <Image
+        src="/images/facebook.png"
+        alt="Facebook"
+        width={32}
+        height={32}
+        className={styles.socialIconImage}
+      />
     );
   }
 
