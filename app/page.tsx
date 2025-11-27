@@ -62,8 +62,8 @@ function SocialIcon({ type }: SocialIconProps) {
       <Image
         src="/images/web.png"
         alt="公式サイト"
-        width={22}
-        height={22}
+        width={28}
+        height={28}
         className={styles.socialIconImage}
       />
     );
