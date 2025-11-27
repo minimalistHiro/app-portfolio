@@ -8,6 +8,10 @@ type AppProject = {
   iconImage?: string;
   appStoreLink: string;
   playStoreLink: string;
+  storeButtons?: {
+    appStore: string;
+    googlePlay: string;
+  };
 };
 
 const appProjects: AppProject[] = [
@@ -17,6 +21,10 @@ const appProjects: AppProject[] = [
     iconImage: "/images/yamago-icon.png",
     appStoreLink: "https://apps.apple.com/jp/app/yamago-%E5%B1%B1%E6%89%8B%E7%B7%9A%E5%86%85%E9%AC%BC%E3%81%94%E3%81%A3%E3%81%93/id6754624431",
     playStoreLink: "#", // Replace with actual Google Play URL
+    storeButtons: {
+      appStore: "/images/app-store-button.png",
+      googlePlay: "/images/google-play-button.png",
+    },
   },
   {
     name: "Cafe Compass",
@@ -174,23 +182,64 @@ export default function Home() {
                 {project.subtitle && (
                   <p className={styles.appSubtitle}>{project.subtitle}</p>
                 )}
-                <div className={styles.storeLinks}>
-                  <a
-                    className={styles.storeLink}
-                    href={project.appStoreLink}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    App Store
-                  </a>
-                  <a
-                    className={styles.storeLink}
-                    href={project.playStoreLink}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Google Play
-                  </a>
+                <div
+                  className={`${styles.storeLinks} ${
+                    project.storeButtons ? styles.storeLinksImages : ""
+                  }`}
+                >
+                  {project.storeButtons ? (
+                    <>
+                      <a
+                        className={`${styles.storeLink} ${styles.storeLinkImage}`}
+                        href={project.appStoreLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${project.name} をApp Storeからダウンロード`}
+                      >
+                        <Image
+                          src={project.storeButtons.appStore}
+                          alt="App Storeからダウンロード"
+                          width={700}
+                          height={210}
+                          className={styles.storeButtonImage}
+                        />
+                      </a>
+                      <a
+                        className={`${styles.storeLink} ${styles.storeLinkImage}`}
+                        href={project.playStoreLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${project.name} をGoogle Playで入手`}
+                      >
+                        <Image
+                          src={project.storeButtons.googlePlay}
+                          alt="Google Playで手に入れよう"
+                          width={700}
+                          height={211}
+                          className={styles.storeButtonImage}
+                        />
+                      </a>
+                    </>
+                  ) : (
+                    <>
+                      <a
+                        className={styles.storeLink}
+                        href={project.appStoreLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        App Store
+                      </a>
+                      <a
+                        className={styles.storeLink}
+                        href={project.playStoreLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Google Play
+                      </a>
+                    </>
+                  )}
                 </div>
               </article>
             ))}

@@ -154,6 +154,11 @@
   gap: 0.35rem;
 }
 
+.storeLinksImages {
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
 .storeLink {
   font-size: 0.95rem;
   color: var(--color-accent);
@@ -165,6 +170,22 @@
 
 .storeLink:hover {
   border-color: var(--color-accent);
+}
+
+.storeLinkImage {
+  border-bottom: none;
+  padding: 0;
+}
+
+.storeLinkImage:hover {
+  border-color: transparent;
+}
+
+.storeButtonImage {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
 }
 
 .coffeeImageWrapper {
