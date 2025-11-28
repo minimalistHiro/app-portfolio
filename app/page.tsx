@@ -289,6 +289,16 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <div className={styles.moreAppsButtonWrapper}>
+            <a
+              className={styles.moreAppsButton}
+              href="https://apps.apple.com/jp/developer/hiroki-kaneko/id1656579581"
+              target="_blank"
+              rel="noreferrer"
+            >
+              その他開発したアプリはこちら
+            </a>
+          </div>
         </section>
 
         <section className={`${styles.section} ${styles.coffeeSection}`}>

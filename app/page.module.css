@@ -130,6 +130,35 @@
   gap: 1rem;
 }
 
+.moreAppsButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.moreAppsButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  background: var(--color-text);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.moreAppsButton:hover {
+  transform: translateY(-1px);
+}
+
+.moreAppsButton:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+}
+
 .coffeeSection {
   gap: 1rem;
 }
