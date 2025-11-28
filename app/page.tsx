@@ -178,6 +178,15 @@ export default function Home() {
           </div>
           <p className={styles.profileName}>金子広樹</p>
           <p className={styles.profileRole}>Antenna Books & Cafe ココシバ 店主 × アプリ開発エンジニア</p>
+          <div className={styles.contactAddButtonWrapper}>
+            <a
+              className={styles.contactAddButton}
+              href="/hiroki-kaneko-contact.vcf"
+              aria-label="金子広樹を連絡先に追加"
+            >
+              連絡先に追加
+            </a>
+          </div>
         </section>
 
         <section className={`${styles.section} ${styles.introSection}`}>

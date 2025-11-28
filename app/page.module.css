@@ -74,6 +74,35 @@
   margin: 0;
 }
 
+.contactAddButtonWrapper {
+  margin-top: 0.5rem;
+}
+
+.contactAddButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.45rem;
+  border-radius: 999px;
+  background: var(--color-text);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contactAddButton:hover {
+  transform: translateY(-1px);
+}
+
+.contactAddButton:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+}
+
 .introSection {
   align-items: center;
 }
