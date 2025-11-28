@@ -12,11 +12,11 @@ type AppProject = {
   subtitle?: string;
   iconLabel?: string;
   iconImage?: string;
-  appStoreLink: string;
-  playStoreLink: string;
+  appStoreLink?: string;
+  playStoreLink?: string;
   storeButtons?: {
-    appStore: StoreButtonImage;
-    googlePlay: StoreButtonImage;
+    appStore?: StoreButtonImage;
+    googlePlay?: StoreButtonImage;
   };
 };
 
@@ -60,10 +60,17 @@ const appProjects: AppProject[] = [
     },
   },
   {
-    name: "Community Pulse",
-    iconLabel: "CP",
-    appStoreLink: "#",
-    playStoreLink: "#",
+    name: "ひらがな・カタカナ練習 - Nocon",
+    subtitle: "UDデジタル教科書体を使用したひらがな・カタカナ練習アプリ",
+    iconImage: "/images/hiragana-icon.png",
+    appStoreLink: "https://apps.apple.com/jp/app/%E3%81%B2%E3%82%89%E3%81%8C%E3%81%AA-%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A%E7%B7%B4%E7%BF%92-nocon/id6451435318",
+    storeButtons: {
+      appStore: {
+        src: "/images/apple-download.jpeg",
+        width: 119,
+        height: 35,
+      },
+    },
   },
 ];
 
@@ -216,55 +223,63 @@ export default function Home() {
                 >
                   {project.storeButtons ? (
                     <>
-                      <a
-                        className={`${styles.storeLink} ${styles.storeLinkImage}`}
-                        href={project.appStoreLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`${project.name} をApp Storeからダウンロード`}
-                      >
-                        <Image
-                          src={project.storeButtons.appStore.src}
-                          alt="App Storeからダウンロード"
-                          width={project.storeButtons.appStore.width}
-                          height={project.storeButtons.appStore.height}
-                          className={styles.storeButtonImage}
-                        />
-                      </a>
-                      <a
-                        className={`${styles.storeLink} ${styles.storeLinkImage}`}
-                        href={project.playStoreLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`${project.name} をGoogle Playで入手`}
-                      >
-                        <Image
-                          src={project.storeButtons.googlePlay.src}
-                          alt="Google Playで手に入れよう"
-                          width={project.storeButtons.googlePlay.width}
-                          height={project.storeButtons.googlePlay.height}
-                          className={styles.storeButtonImage}
-                        />
-                      </a>
+                      {project.appStoreLink && project.storeButtons.appStore && (
+                        <a
+                          className={`${styles.storeLink} ${styles.storeLinkImage}`}
+                          href={project.appStoreLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`${project.name} をApp Storeからダウンロード`}
+                        >
+                          <Image
+                            src={project.storeButtons.appStore.src}
+                            alt="App Storeからダウンロード"
+                            width={project.storeButtons.appStore.width}
+                            height={project.storeButtons.appStore.height}
+                            className={styles.storeButtonImage}
+                          />
+                        </a>
+                      )}
+                      {project.playStoreLink && project.storeButtons.googlePlay && (
+                        <a
+                          className={`${styles.storeLink} ${styles.storeLinkImage}`}
+                          href={project.playStoreLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`${project.name} をGoogle Playで入手`}
+                        >
+                          <Image
+                            src={project.storeButtons.googlePlay.src}
+                            alt="Google Playで手に入れよう"
+                            width={project.storeButtons.googlePlay.width}
+                            height={project.storeButtons.googlePlay.height}
+                            className={styles.storeButtonImage}
+                          />
+                        </a>
+                      )}
                     </>
                   ) : (
                     <>
-                      <a
-                        className={styles.storeLink}
-                        href={project.appStoreLink}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        App Store
-                      </a>
-                      <a
-                        className={styles.storeLink}
-                        href={project.playStoreLink}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Google Play
-                      </a>
+                      {project.appStoreLink && (
+                        <a
+                          className={styles.storeLink}
+                          href={project.appStoreLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          App Store
+                        </a>
+                      )}
+                      {project.playStoreLink && (
+                        <a
+                          className={styles.storeLink}
+                          href={project.playStoreLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Google Play
+                        </a>
+                      )}
                     </>
                   )}
                 </div>
