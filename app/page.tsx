@@ -30,13 +30,13 @@ const appProjects: AppProject[] = [
     storeButtons: {
       appStore: {
         src: "/images/apple-download.jpeg",
-        width: 954,
-        height: 279,
+        width: 477,
+        height: 140,
       },
       googlePlay: {
         src: "/images/google-download.jpeg",
-        width: 961,
-        height: 284,
+        width: 481,
+        height: 142,
       },
     },
   },
