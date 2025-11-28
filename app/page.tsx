@@ -1,6 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+type StoreButtonImage = {
+  src: string;
+  width: number;
+  height: number;
+};
+
 type AppProject = {
   name: string;
   subtitle?: string;
@@ -9,8 +15,8 @@ type AppProject = {
   appStoreLink: string;
   playStoreLink: string;
   storeButtons?: {
-    appStore: string;
-    googlePlay: string;
+    appStore: StoreButtonImage;
+    googlePlay: StoreButtonImage;
   };
 };
 
@@ -22,8 +28,16 @@ const appProjects: AppProject[] = [
     appStoreLink: "https://apps.apple.com/jp/app/yamago-%E5%B1%B1%E6%89%8B%E7%B7%9A%E5%86%85%E9%AC%BC%E3%81%94%E3%81%A3%E3%81%93/id6754624431",
     playStoreLink: "#", // Replace with actual Google Play URL
     storeButtons: {
-      appStore: "/images/app-store-button.png",
-      googlePlay: "/images/google-play-button.png",
+      appStore: {
+        src: "/images/apple-download.jpeg",
+        width: 954,
+        height: 279,
+      },
+      googlePlay: {
+        src: "/images/google-download.jpeg",
+        width: 961,
+        height: 284,
+      },
     },
   },
   {
@@ -197,10 +211,10 @@ export default function Home() {
                         aria-label={`${project.name} をApp Storeからダウンロード`}
                       >
                         <Image
-                          src={project.storeButtons.appStore}
+                          src={project.storeButtons.appStore.src}
                           alt="App Storeからダウンロード"
-                          width={700}
-                          height={210}
+                          width={project.storeButtons.appStore.width}
+                          height={project.storeButtons.appStore.height}
                           className={styles.storeButtonImage}
                         />
                       </a>
@@ -212,10 +226,10 @@ export default function Home() {
                         aria-label={`${project.name} をGoogle Playで入手`}
                       >
                         <Image
-                          src={project.storeButtons.googlePlay}
+                          src={project.storeButtons.googlePlay.src}
                           alt="Google Playで手に入れよう"
-                          width={700}
-                          height={211}
+                          width={project.storeButtons.googlePlay.width}
+                          height={project.storeButtons.googlePlay.height}
                           className={styles.storeButtonImage}
                         />
                       </a>
