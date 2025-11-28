@@ -156,9 +156,11 @@
 
 .storeLinksImages {
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.5rem;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .storeLink {
@@ -177,6 +179,8 @@
 .storeLinkImage {
   border-bottom: none;
   padding: 0;
+  display: flex;
+  flex: 0 0 auto;
 }
 
 .storeLinkImage:hover {
