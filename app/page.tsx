@@ -41,10 +41,23 @@ const appProjects: AppProject[] = [
     },
   },
   {
-    name: "Cafe Compass",
-    iconLabel: "CC",
-    appStoreLink: "#",
-    playStoreLink: "#",
+    name: "SheeBa",
+    subtitle: "川口市芝銀座通り商店街の地域ポイントアプリ",
+    iconImage: "/images/sheeba-icon.png",
+    appStoreLink: "https://apps.apple.com/jp/app/sheeba-%E5%B7%9D%E5%8F%A3%E5%B8%82%E8%8A%9D%E9%8A%80%E5%BA%A7%E9%80%9A%E3%82%8A%E5%95%86%E5%BA%97%E8%A1%97%E3%81%AE%E5%9C%B0%E5%9F%9F%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA/id6475390775",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.hiroki.sheeba&hl=ja",
+    storeButtons: {
+      appStore: {
+        src: "/images/apple-download.jpeg",
+        width: 119,
+        height: 35,
+      },
+      googlePlay: {
+        src: "/images/google-download.jpeg",
+        width: 121,
+        height: 36,
+      },
+    },
   },
   {
     name: "Community Pulse",
