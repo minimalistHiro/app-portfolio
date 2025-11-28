@@ -9,8 +9,7 @@ EMAIL;TYPE=INTERNET:h.kaneko.baseball@icloud.com
 ADR;TYPE=WORK:;;芝5-5-13;川口市;埼玉県;;日本
 URL:https://cocoshiba.com
 URL:https://minimalist-hiro-app.com/
-URL:https://www.instagram.com/cocoshiba5513
-X-SOCIALPROFILE;type=X:https://x.com/cocoshiba5513
-X-SOCIALPROFILE;type=Facebook:https://www.facebook.com/cocoshiba5513
-X-SOCIALPROFILE;type=Instagram:https://www.instagram.com/cocoshiba5513
+X-SOCIALPROFILE;type=twitter;X-USER=cocoshiba5513;X-URL=https://x.com/cocoshiba5513:https://x.com/cocoshiba5513
+X-SOCIALPROFILE;type=facebook;X-USER=cocoshiba5513;X-URL=https://www.facebook.com/cocoshiba5513:https://www.facebook.com/cocoshiba5513
+X-SOCIALPROFILE;type=instagram;X-USER=cocoshiba5513;X-URL=https://www.instagram.com/cocoshiba5513:https://www.instagram.com/cocoshiba5513
 END:VCARD
