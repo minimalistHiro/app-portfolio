@@ -26,11 +26,17 @@ const appProjects: AppProject[] = [
     subtitle: "新感覚！山手線内リアル鬼ごっこ",
     iconImage: "/images/yamago-icon.png",
     appStoreLink: "https://apps.apple.com/jp/app/yamago-%E5%B1%B1%E6%89%8B%E7%B7%9A%E5%86%85%E9%AC%BC%E3%81%94%E3%81%A3%E3%81%93/id6754624431",
+    playStoreLink: "https://play.google.com/store/apps/details?id=io.groumap.yamago",
     storeButtons: {
       appStore: {
         src: "/images/apple-download.jpeg",
         width: 119,
         height: 35,
+      },
+      googlePlay: {
+        src: "/images/google-download.jpeg",
+        width: 121,
+        height: 36,
       },
     },
   },
