@@ -305,16 +305,6 @@ export default function Home() {
               その他開発したアプリはこちら
             </a>
           </div>
-          <div className={styles.googleGroupButtonWrapper}>
-            <a
-              className={styles.googleGroupButton}
-              href="https://groups.google.com/g/hiro-apptest"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Googleグループに参加
-            </a>
-          </div>
         </section>
 
         <section className={`${styles.section} ${styles.coffeeSection}`}>
