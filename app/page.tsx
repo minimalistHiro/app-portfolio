@@ -312,7 +312,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Googleグループの参加はこちら
+              Googleグループに参加
             </a>
           </div>
         </section>
