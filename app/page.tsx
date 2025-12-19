@@ -22,6 +22,19 @@ type AppProject = {
 
 const appProjects: AppProject[] = [
   {
+    name: "ココシバ公式アプリ",
+    subtitle: "Antenna Books & Cafe ココシバのポイント、イベント確認・予約",
+    iconImage: "/images/cocoshiba-app-icon.png",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.groumap.cocoshiba",
+    storeButtons: {
+      googlePlay: {
+        src: "/images/google-download.jpeg",
+        width: 121,
+        height: 36,
+      },
+    },
+  },
+  {
     name: "YamaGo〜山手線内鬼ごっこ〜",
     subtitle: "新感覚！山手線内リアル鬼ごっこ",
     iconImage: "/images/yamago-icon.png",
