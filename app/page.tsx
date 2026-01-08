@@ -25,8 +25,14 @@ const appProjects: AppProject[] = [
     name: "ココシバ公式アプリ",
     subtitle: "Antenna Books & Cafe ココシバのポイント、イベント確認・予約",
     iconImage: "/images/cocoshiba-app-icon.png",
+    appStoreLink: "https://apps.apple.com/jp/app/%E3%82%B3%E3%82%B3%E3%82%B7%E3%83%90%E5%85%AC%E5%BC%8F%E3%82%A2%E3%83%97%E3%83%AA/id6756299363",
     playStoreLink: "https://play.google.com/store/apps/details?id=com.groumap.cocoshiba",
     storeButtons: {
+      appStore: {
+        src: "/images/apple-download.jpeg",
+        width: 119,
+        height: 35,
+      },
       googlePlay: {
         src: "/images/google-download.jpeg",
         width: 121,
