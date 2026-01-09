@@ -96,7 +96,7 @@ const appProjects: AppProject[] = [
 const socialLinks = [
   {
     label: "Antenna Books & Cafe ココシバ Official Site",
-    url: "https://cocoshiba.com",
+    url: "https://newcocoshiba.com",
     icon: "site",
   },
   {
