@@ -367,6 +367,23 @@
   gap: 0.75rem;
 }
 
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.legalLink {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.legalLink:hover {
+  text-decoration: underline;
+}
+
 .socialItem {
   display: inline-flex;
   align-items: center;

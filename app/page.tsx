@@ -425,6 +425,14 @@ export default function Home() {
               </a>
             ))}
           </div>
+          <div className={styles.legalLinks}>
+            <a className={styles.legalLink} href="/terms">
+              利用規約
+            </a>
+            <a className={styles.legalLink} href="/privacy">
+              プライバシーポリシー
+            </a>
+          </div>
         </section>
 
         <footer className={styles.footer}>
