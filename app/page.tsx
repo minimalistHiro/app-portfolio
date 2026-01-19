@@ -22,6 +22,44 @@ type AppProject = {
 
 const appProjects: AppProject[] = [
   {
+    name: "GrouMap",
+    subtitle: "中小規模飲食店向けポイントアプリ",
+    iconImage: "/images/groumap-icon.png",
+    appStoreLink: "https://apps.apple.com/jp/app/groumap/id6757521236",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.groumap.groumapapp",
+    storeButtons: {
+      appStore: {
+        src: "/images/apple-download.jpeg",
+        width: 119,
+        height: 35,
+      },
+      googlePlay: {
+        src: "/images/google-download.jpeg",
+        width: 121,
+        height: 36,
+      },
+    },
+  },
+  {
+    name: "GrouMap店舗用",
+    subtitle: "GrouMap店舗用アプリ。顧客管理、データ分析、情報発信。",
+    iconImage: "/images/groumap-store-icon.png",
+    appStoreLink: "https://apps.apple.com/jp/app/groumap%E5%BA%97%E8%88%97%E7%94%A8/id6757588727",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.groumap.groumapappstore",
+    storeButtons: {
+      appStore: {
+        src: "/images/apple-download.jpeg",
+        width: 119,
+        height: 35,
+      },
+      googlePlay: {
+        src: "/images/google-download.jpeg",
+        width: 121,
+        height: 36,
+      },
+    },
+  },
+  {
     name: "ココシバ公式アプリ",
     subtitle: "Antenna Books & Cafe ココシバのポイント、イベント確認・予約",
     iconImage: "/images/cocoshiba-app-icon.png",
