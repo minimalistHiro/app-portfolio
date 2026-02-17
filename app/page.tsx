@@ -22,7 +22,7 @@ type AppProject = {
 
 const appProjects: AppProject[] = [
   {
-    name: "GrouMap",
+    name: "ぐるまっぷ",
     subtitle: "中小規模飲食店向けポイントアプリ",
     iconImage: "/images/groumap-icon.png",
     appStoreLink: "https://apps.apple.com/jp/app/groumap/id6757521236",
@@ -41,7 +41,7 @@ const appProjects: AppProject[] = [
     },
   },
   {
-    name: "GrouMap店舗用",
+    name: "ぐるまっぷ店舗用",
     subtitle: "GrouMap店舗用アプリ。顧客管理、データ分析、情報発信。",
     iconImage: "/images/groumap-store-icon.png",
     appStoreLink: "https://apps.apple.com/jp/app/groumap%E5%BA%97%E8%88%97%E7%94%A8/id6757588727",
